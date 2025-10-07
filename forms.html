@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML part 4</title>
+</head>
+
+<body>
+    <!-- form/action/input -->
+    <!-- form tag ke andar hum input fields create krte ha jisme user apni information dalta ha -->
+    <!-- form ke andar "action" attribute hota ha jisme hum us page ka link dete ha jaha hum apni information bhejna chahte ha -->
+    <!-- input tag ke andar "type" attribute hota ha jisme hum input field ka type define krte ha jaise ki text,password,email,number etc -->
+    <!-- "placeholder" attribute hota ha jisme hum input field ke andar ek hint dete ha ki user ko kya dalna ha -->
+    <!-- "label" tag hota ha jisme hum input field ke liye ek label define krte ha -->
+    <!-- "for" attribute label ma use hota ha and input ma "id" attribute se link hota ha dono ki value same honi chiye -->
+    <!-- "name" attribute se backend ko pta chlta ha ki hum kia bhej rhe ha very very very imp -->
+    <!-- "required" attribute se hum input field ko mandatory bana skte ha -->
+    <form action="/data.php">
+        <label for="name">name:</label>
+        <input name="name" type="text" id="name" placeholder="enter your name" required>
+
+        <br><br>
+        <label for="pass">pass:</label>
+        <input name="pass" type="password" id="pass" placeholder="enter your password" required>
+
+        <br><br>
+        <label for="email">email:</label>
+        <input name="email" type="email" id="email" placeholder="enter your email">
+
+        <br><br>
+        <label for="phone">phn.number:</label>
+        <input name="phone" type="number" id="phone" placeholder="enter your phone number">
+
+        <br><br>
+
+        <!-- textarea tag is used to create a multi line input field -->
+        <!-- cols and rows attribute is used to define the width and height of the textarea -->
+        <label for="message">message:</label>  <br>
+        <textarea name="msg" id="message" placeholder="enter your feedback" cols="30" rows="10"></textarea>
+
+        <br><br>
+        <button type="button">button</button>
+        <!-- ye button pe click krne se kuch nhi hoga by default button type hi hota ha -->
+        <button type="submit">submit</button> <!-- ye button pe click krne se form submit ho jayega -->
+        <button type="reset">reset</button> <!-- ye button pe click krne se form reset ho jayega -->
+    </form>
+
+    <hr>
+
+    <!-- 2nd form -->
+    <!-- checkbox allow us to select one or more option -->
+    <!-- "value" attribute ke andar likhi hui chije hi humare backend ma jati ha -->
+    <!-- "disabled" attribute is used to disable the checkbox -->
+    <!-- "checked" attribute is used to check the checkbox by default -->
+
+    <form action="/submit">
+        <label><input type="checkbox" name="hobby" value="reading" disabled> Reading</label><br>
+        <!-- disabled se ye option select nhi hoga -->
+        <label><input type="checkbox" name="hobby" value="music"> Music</label><br>
+        <label><input type="checkbox" name="hobby" value="sports"> Sports</label><br>
+
+        <label><input type="checkbox" name="terms" checked> I agree to the Terms & Conditions</label>
+        <!-- checked se ye option by default check hoke show hoga -->
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <hr>
+
+    <!-- 3rd form -->
+    <!-- radio button allow us to select only one option -->
+    <form>
+        <label><input type="radio" name="gender" value="male"> Male</label><br><br>
+        <label><input type="radio" name="gender" value="gay" disabled> Gay</label><br><br>
+        <label><input type="radio" name="gender" value="female"> Female</label><br><br>
+        <label><input type="radio" name="gender" value="other" checked> Other</label><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr>
+    <!-- 4th form -->
+    <!-- range creates a slider control that lets users pick a numeric value by moving a handle along a track. -->
+    <form>
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" name="vol" min="0" max="50" step="10" value="50">  <!-- min and max define the range and value define the default value -->
+        <!-- step define the interval of the range -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
